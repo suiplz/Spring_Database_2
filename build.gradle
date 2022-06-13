@@ -25,12 +25,18 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//	JPA implementation -> JDBC 추가
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
 	runtimeOnly 'com.h2database:h2'
 
 	//테스트에서 lombok 사용
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {
